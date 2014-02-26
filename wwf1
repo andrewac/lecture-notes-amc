@@ -1,0 +1,50 @@
+f = open('/home/andrewac/Downloads/enable1.txt', 'r')
+wordList = []
+word = 'notaword'
+word2 = 'word'
+for line in f:
+    wordList.append(line.strip())
+#exercise1
+"""def isword(word):
+    if word in wordList:
+        print ("YES")
+        return 1
+    else:
+        print ("NO")
+        return 0
+"""
+"""def isword(word):
+    return word in wordList
+"""
+"""
+#broken
+    def isword(word):
+        start=0
+        end = len(wordList)
+        middle = (start+end)//2
+        while word != wordList[middle] and start+1<end:
+            if wordList[middle]>word:
+                end = middle
+            else:
+                start = middle
+                middle = (start+end)//2
+        return word == wordList[middle]
+"""    
+wordDic={}
+for line in f:
+    wordDic.append(line.strip())
+    
+if isword(word2):
+    print ("YES")
+else:
+    print ("NO")
+
+#exercise2
+"""import collections
+letter = "a"
+c = Counter()
+for letter in wordList:
+    cnt[letter]
+"""
+
+        
