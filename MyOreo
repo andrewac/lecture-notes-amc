@@ -1,0 +1,15 @@
+f = open('/home/andrewac/Downloads/GIT REFRESh/lecture-notes-master/exercises/set2/oreos/coded_msg.txt', 'r')
+CodedMessage=[]
+for line in f:
+    CodedMessage.append(line.strip())
+#print (CodedMessage)
+#print (CodedMessage[::2])
+#print (CodedMessage[1::2])
+n = 0
+Cookie = CodedMessage[::2]
+TopCookie = [x[0] for x in Cookie]
+BottomCookie = [x[1] for x in Cookie]
+#print (BottomCookie)
+Stuff = CodedMessage[1::2]
+for n in range([0],[1])
+    print (TopCookie,Stuff,BottomCookie)
