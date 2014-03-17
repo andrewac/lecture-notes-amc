@@ -1,0 +1,33 @@
+
+f = open('/home/andrewac/Downloads/enable1.txt', 'r')
+WordList = []
+for line in f:
+    WordList.append(line.strip())
+
+AnagramLetters={}
+AnagramList=[]
+def makekey(word):
+    return tuple(sorted(word))
+
+for word in WordList:
+    key=makekey(word)
+    if key in AnagramLetters:
+        AnagramLetters[key].append(word)
+    else:
+        AnagramLetters[key]=[word]
+   
+for word in WordList:
+    if len(AnagramLetters[makekey(word)])!=1:
+        AnagramList.append(word)
+NumberOfAnagrams = len(AnagramList)
+
+AnagramWords = {}
+for word in AnagramList:
+    wordlen = len(word)
+#    MeanWordLength = sum(wordlen)/len(AnagramList)
+#    print (MeanWordLength)
+    print("this is '",word,"' and it is", wordlen, "letters long." )
+print("this is '",word,"' and it is", wordlen, "letters long." )
+print ("There are", NumberOfAnagrams, "anagram groups.")
+#print (LongestAnagram)
+
